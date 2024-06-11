@@ -19,18 +19,11 @@ public class PreventivoController {
 	@GetMapping("/greeting")
 	public String greeting(@RequestParam String input, String promoCode) {
 			
-		Work[] work = {new Work(),new Work(),new Work()};
+		Work[] work = {new Work("Backend Development",20.50),new Work("Frontend Development",15.30),new Work("Project Analysis",33.60)};
 		int workTime = 10;
 		double finalPrice = 0.00;
 		String[] validCodes = {"YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"};
 		
-		//fare un json per usare il foreach
-		work[0].setName("Backend Development");
-		work[0].setRate(20.50);
-		work[1].setName("Frontend Development");
-		work[1].setRate(15.30);
-		work[2].setName("Project Analysis");
-		work[2].setRate(33.60);
 			
 		if (input.equals("2")) {
 			finalPrice = work[0].getRate() * workTime;

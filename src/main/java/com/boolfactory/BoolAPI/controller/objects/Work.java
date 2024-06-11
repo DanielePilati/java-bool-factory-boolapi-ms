@@ -20,4 +20,10 @@ public class Work {
 	    public void setRate(double newRate) {
 		      this.rate = newRate;
 		    }
+	    
+	   // Constructor
+	   public  Work(String name,double rate){
+	    	
+	    }
+	    
 }
